@@ -1,28 +1,30 @@
 {
-  "name": "pinto",
+  "name": "@nagajHomelab/pinto",
   "version": "0.0.0",
+  "description": "Bryce Nagaj's personal website",
+  "homepage": "https://github.com/b-nagaj/Pinto",
+  "bugs": {
+    "url": "https://github.com/b-nagaj/Pinto/issues",
+    "email": "bryce.nagaj@proton.me"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "Bryce Nagaj",
+    "email": "bryce.nagaj@proton.me",
+    "url": "https://github.com/b-nagaj"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-nagaj/pinto.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "serve:ssr:pinto": "node dist/pinto/server/server.mjs"
   },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
-  "private": true,
-  "packageManager": "npm@9.2.0",
   "dependencies": {
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
@@ -45,5 +47,17 @@
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
-  }
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32",
+    "android"
+  ],
+  "cpu": [
+    "x64",
+    "arm",
+    "arm64"
+  ],
+  "private": true
 }
