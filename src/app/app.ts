@@ -22,7 +22,8 @@ import { MenuItem } from 'primeng/api';
 })
 export class App {
 	protected readonly title = signal("pinto");
-	items: MenuItem[] | undefined;
+
+	public items: MenuItem[] | undefined;
 
 	/**
 	 * @brief Constructor
