@@ -10,14 +10,11 @@ import { RouterOutlet, Router } from "@angular/router";
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 
-import { DashboardPage } from "./pages/dashboard-page/dashboard-page"
-
 @Component({
     selector: "app-root",
 	standalone: true,
 	imports: [
 		RouterOutlet,
-		DashboardPage,
 		MenubarModule
 	],
 	templateUrl: "./app.html",
