@@ -4,13 +4,11 @@
  * =============================================================================
  */
 
-import { Component } from "@angular/core";
-
-import { ButtonModule } from 'primeng/button';
+import { Component, OnInit, Inject } from "@angular/core";
 
 @Component({
 	selector: "app-dashboard-page",
-	imports: [ButtonModule],
+	imports: [],
 	templateUrl: "./dashboard-page.html",
 	styleUrl: "./dashboard-page.scss",
 })

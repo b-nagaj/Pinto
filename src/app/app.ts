@@ -5,7 +5,10 @@
  */
 
 import { Component, signal } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+import { RouterOutlet, Router } from "@angular/router";
+
+import { MenubarModule } from 'primeng/menubar';
+import { MenuItem } from 'primeng/api';
 
 import { DashboardPage } from "./pages/dashboard-page/dashboard-page"
 
@@ -13,12 +16,56 @@ import { DashboardPage } from "./pages/dashboard-page/dashboard-page"
     selector: "app-root",
 	standalone: true,
 	imports: [
-		DashboardPage
-		/*RouterOutlet*/
+		RouterOutlet,
+		DashboardPage,
+		MenubarModule
 	],
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",
 })
 export class App {
 	protected readonly title = signal("pinto");
+	items: MenuItem[] | undefined;
+
+	/**
+	 * @brief Constructor
+	 * @description Instantiates a new Angular router
+	 * @param router a `Router` obj
+	 */
+	constructor(private router: Router) {}
+
+	/**
+	 * @brief Initialization
+	 * @description Initializes the list of menu items on the menubar
+	 */
+	ngOnInit() {
+		this.items = [
+			{
+				label: "Home",
+				icon: "pi pi-home",
+				command: () => {
+					this.router.navigate(['/', 'dashboard']);
+				}
+			},
+			{
+				label: "Resume",
+				icon: "pi pi-briefcase",
+				command: () => {
+					this.router.navigate(['/resume'])
+				}
+			},
+			{
+				label: "Projects",
+				icon: "pi pi-code",
+				command: () => {
+					this.router.navigate(['/projects'])
+				}
+			},
+			{
+				label: "GitHub",
+				icon: "pi pi-github",
+				url: "https://github.com/b-nagaj"
+			}
+		]
+	}
 }
