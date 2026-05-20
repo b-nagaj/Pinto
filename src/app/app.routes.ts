@@ -6,4 +6,9 @@
 
 import { Routes } from "@angular/router";
 
-export const routes: Routes = [];
+import { DashboardPage } from "./pages/dashboard-page/dashboard-page"
+
+export const routes: Routes = [
+	{ path: 'dashboard', component: DashboardPage},
+	{ path: '', redirectTo: 'dasboard', pathMatch: 'full' }
+];
