@@ -13,5 +13,6 @@ import { Resume } from "../../components/resume/resume"
 	imports: [Resume],
 	templateUrl: "./resume-page.html",
 	styleUrl: "./resume-page.scss",
+	standalone: true
 })
 export class ResumePage {}
