@@ -5,7 +5,13 @@
 !-->
 
 <div class="card">
-	<p-menubar [model]="items"></p-menubar>
+	<p-menubar [model]="items">
+        <ng-template #end>
+            <div>
+            	<p>Bryce Nagaj</p>
+            </div>
+        </ng-template>
+	</p-menubar>
 </div>
 
 <router-outlet>
