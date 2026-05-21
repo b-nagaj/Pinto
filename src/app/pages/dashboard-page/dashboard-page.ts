@@ -31,7 +31,7 @@ export class DashboardPage implements OnDestroy {
 
 			switch (command.toLowerCase()) {
 				case "hello":
-					response = "Hello! Thanks for stopping by. I'm a senior full-stack software engineer";
+					response = "Hello! Thanks for stopping by. I'm a senior full-stack software engineer at Keysight Technologies with 5+ years of experience developing secure, reliable, maintainable, and user-friendly software for enterprises. Ay-Ziggy-Zoomba!";
 					break;
 				default:
 					response = `Unknown command: '${command}'`;
