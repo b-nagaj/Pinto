@@ -23,6 +23,7 @@ import { DownloadFile } from "../../services/download-file/download-file"
 })
 export class Resume {
 	public readonly resumeFilePath: string = "assets/resume.pdf";
+	public readonly resumeFilename: string = "BryceNagajResume.pdf"
 
 	/**
 	 * @brief Constructor
@@ -36,6 +37,6 @@ export class Resume {
 	 * @description Downloads the PDF source by means of the DownloadFile service
 	 */
 	public onDownloadBtnClick() {
-		this.downloadFileService.downloadFile(this.resumeFilePath);
+		this.downloadFileService.downloadFile(this.resumeFilePath, this.resumeFilename);
 	}
 }

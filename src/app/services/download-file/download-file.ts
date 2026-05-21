@@ -23,13 +23,14 @@ export class DownloadFile {
 	 * @description Downloads a file on the user's local machine by creating
 	 *              a hidden link and clicking it to trigger a browser download
 	 * @param filePath The path of the file to download, in string format
+	 * @param fileName The name of the downloaded asset, in string formatp
 	 */
-	public downloadFile(filePath: string) {
+	public downloadFile(filePath: string, fileName: string) {
 	    this.http.get(filePath, { responseType: 'blob' }).subscribe((data: Blob) => {
 	        const downloadUrl: string = window.URL.createObjectURL(data);
 	        const link: HTMLAnchorElement = document.createElement('a');
 	        link.href = downloadUrl;
-	        link.download = 'file.pdf';
+	        link.download = fileName;
 	        document.body.appendChild(link);
 	        link.click();
 	        document.body.removeChild(link);
