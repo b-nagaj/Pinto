@@ -4,7 +4,7 @@
  * =============================================================================
  */
 
-import { Component, signal } from "@angular/core";
+import { Component, signal, OnInit } from "@angular/core";
 import { RouterOutlet, Router } from "@angular/router";
 
 import { MenubarModule } from 'primeng/menubar';
@@ -20,7 +20,7 @@ import { MenuItem } from 'primeng/api';
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",
 })
-export class App {
+export class App implements OnInit {
 	protected readonly title = signal("pinto");
 
 	public items: MenuItem[] | undefined;
