@@ -53,16 +53,14 @@ export class App implements OnInit {
 				}
 			},
 			{
-				label: "Projects",
-				icon: "pi pi-code",
-				command: () => {
-					this.router.navigate(['/projects'])
-				}
-			},
-			{
 				label: "GitHub",
 				icon: "pi pi-github",
 				url: "https://github.com/b-nagaj"
+			},
+			{
+				label: "Contact",
+				icon: "pi pi-envelope",
+				url: "mailto:bryce.nagaj@keysight.com"
 			}
 		]
 	}
