@@ -1,0 +1,11 @@
+<!--
+================================================================================
+@description: Template for the `app-resume` component
+================================================================================
+!-->
+
+@if (markdownContent$ | async; as content) {
+  	<remark [markdown]="content" />
+} @else {
+	<p-progress-spinner ariaLabel="loading" />
+}

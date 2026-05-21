@@ -6,9 +6,11 @@
 
 import { Component } from "@angular/core";
 
+import { Resume } from "../../components/resume/resume"
+
 @Component({
 	selector: "app-resume-page",
-	imports: [],
+	imports: [Resume],
 	templateUrl: "./resume-page.html",
 	styleUrl: "./resume-page.scss",
 })
