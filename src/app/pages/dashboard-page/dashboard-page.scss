@@ -3,3 +3,44 @@
  * @description: Styling for the `app-dashboard-page` component
  * =============================================================================
  */
+
+.title {
+	align-items: right;
+}
+
+ /* Formats a container in the top half of the page */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Centers content inside of a row */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 75%;
+  padding-top: 5rem;
+
+  p-terminal {
+    flex: 1;
+  }
+}
+
+/* Renders an image as a circle */
+:host ::ng-deep .circular-profile {
+  width: 25%;
+  height: 25%;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

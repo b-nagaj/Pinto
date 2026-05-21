@@ -8,21 +8,19 @@ import { Component, OnInit, Inject, OnDestroy } from "@angular/core";
 
 import { Subscription } from 'rxjs';
 import { TerminalModule, TerminalService } from 'primeng/terminal';
+import { ImageModule } from 'primeng/image';
 
 @Component({
 	selector: "app-dashboard-page",
 	imports: [
-		TerminalModule
+		TerminalModule,
+		ImageModule,
 	],
 	providers: [TerminalService],
 	templateUrl: "./dashboard-page.html",
 	styleUrl: "./dashboard-page.scss",
 })
 export class DashboardPage implements OnDestroy {
-	public readonly terminalWelcomeMessage: string =
-		"Welcome to Bryce Nagaj's personal portfolio website";
-	public readonly terminalPrompt: string = "$";
-
 	private terminalSubscription!: Subscription;
 
 	constructor(private terminalService: TerminalService) {
@@ -33,7 +31,7 @@ export class DashboardPage implements OnDestroy {
 
 			switch (command.toLowerCase()) {
 				case "hello":
-					response = "It works";
+					response = "Hello! Thanks for stopping by. I'm a senior full-stack software engineer";
 					break;
 				default:
 					response = `Unknown command: '${command}'`;
