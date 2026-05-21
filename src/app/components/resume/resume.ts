@@ -7,14 +7,35 @@
 import { Component } from "@angular/core";
 
 import { PdfViewerModule } from "ng2-pdf-viewer";
+import { ButtonModule } from 'primeng/button';
+
+import { DownloadFile } from "../../services/download-file/download-file"
 
 @Component({
 	selector: "app-resume",
-	imports: [PdfViewerModule],
+	imports: [
+		PdfViewerModule,
+		ButtonModule
+	],
 	templateUrl: "./resume.html",
 	styleUrl: "./resume.scss",
 	standalone: true
 })
 export class Resume {
-	public resumeFilePath = "assets/resume.pdf";
+	public readonly resumeFilePath: string = "assets/resume.pdf";
+
+	/**
+	 * @brief Constructor
+	 * @description Instantiates an HttpClient and DownloadFile services
+	 * @param downloadFileService a DownloadFile object
+	 */
+	constructor(private downloadFileService: DownloadFile) {}
+
+	/**
+	 * @brief Downloads the resume PDF source
+	 * @description Downloads the PDF source by means of the DownloadFile service
+	 */
+	public onDownloadBtnClick() {
+		this.downloadFileService.downloadFile(this.resumeFilePath);
+	}
 }
