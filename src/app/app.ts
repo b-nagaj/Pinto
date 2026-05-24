@@ -11,6 +11,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 
 import { Keycap } from "./components/keycap/keycap"
+import { Footer } from "./components/footer/footer"
 
 @Component({
     selector: "app-root",
@@ -18,7 +19,8 @@ import { Keycap } from "./components/keycap/keycap"
 	imports: [
 		RouterOutlet,
 		MenubarModule,
-		Keycap
+		Keycap,
+		Footer
 	],
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",
