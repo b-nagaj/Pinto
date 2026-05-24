@@ -3,3 +3,40 @@
  * @description: Styling for the `app-dashboard-page` component
  * =============================================================================
  */
+
+ .hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #888888;
+  line-height: 1.6;
+
+  a {
+    color: #0076ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: #3b9eff;
+      text-decoration: underline;
+    }
+  }
+}
