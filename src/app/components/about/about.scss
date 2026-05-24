@@ -7,6 +7,7 @@
 :host {
   --p-terminal-color: black;
   --p-terminal-background: #ebdbb2;
+  --p-terminal-border-color: var(--color-alternate-background);
 }
 
 /* Wrapper for the primary content container */
