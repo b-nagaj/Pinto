@@ -23,6 +23,8 @@ import { ImageModule } from 'primeng/image';
 	styleUrl: "./about.scss",
 })
 export class About implements OnDestroy {
+	public readonly profilePicture: string = "assets/images/profile.jpeg"
+
 	private terminalSubscription!: Subscription;
 
 	/**
