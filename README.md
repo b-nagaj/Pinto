@@ -18,7 +18,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 *What tools do I need to have installed?*
 
-- [Node.js](https://nodejs.org/en)
+- [Node.js >=20.19.2](https://nodejs.org/en)
 
 ## Install
 
