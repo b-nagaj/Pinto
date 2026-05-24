@@ -6,11 +6,14 @@
 
 import { Component } from "@angular/core";
 
+import { DividerModule } from 'primeng/divider';
+
 import { About } from "../../components/about/about"
 
 @Component({
 	selector: "app-dashboard-page",
 	imports: [
+		DividerModule,
 		About
 	],
 	templateUrl: "./dashboard-page.html",
