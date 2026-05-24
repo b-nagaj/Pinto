@@ -14,4 +14,43 @@
 	</p-menubar>
 </div>
 
+<div class=keycap-dock>
+    <div class="dock-item">
+        <span class="pi pi-home"></span>
+        <app-keycap
+            pathToIcon="/assets/icons/keycapIcon1.png"
+            alt="keycapButton"
+            key="1"
+            route="/dashboard">
+        </app-keycap>
+    </div>
+    <div class="dock-item">
+        <span class="pi pi-briefcase"></span>
+        <app-keycap
+            pathToIcon="/assets/icons/keycapIcon2.png"
+            alt="keycapButton"
+            key="2"
+            route="/resume">
+        </app-keycap>
+    </div>
+    <div class="dock-item">
+        <span class="pi pi-github"></span>
+        <app-keycap
+            pathToIcon="/assets/icons/keycapIcon3.png"
+            alt="keycapButton"
+            key="3"
+            url="https://github.com/b-nagaj">
+        </app-keycap>
+    </div>
+    <div class="dock-item">
+        <span class="pi pi-envelope"></span>
+        <app-keycap
+            pathToIcon="/assets/icons/keycapIcon4.png"
+            alt="keycapButton"
+            key="4"
+            url="mailto:bryce.nagaj@keysight.com">
+        </app-keycap>
+    </div>
+</div>
+
 <router-outlet>

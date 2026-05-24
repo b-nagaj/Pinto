@@ -10,12 +10,15 @@ import { RouterOutlet, Router } from "@angular/router";
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 
+import { Keycap } from "./components/keycap/keycap"
+
 @Component({
     selector: "app-root",
 	standalone: true,
 	imports: [
 		RouterOutlet,
-		MenubarModule
+		MenubarModule,
+		Keycap
 	],
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",

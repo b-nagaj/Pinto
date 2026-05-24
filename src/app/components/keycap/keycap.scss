@@ -1,0 +1,55 @@
+/**
+ * =============================================================================
+ * @description Styling for the 'Keycap' component
+ * =============================================================================
+ */
+
+/* Button box */
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Button container */
+button {
+  width: 64px;
+  height: 64px;
+  border: none;
+  background: red;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease, transform 0.1s ease;
+  box-shadow: 0 4px 0 #b5b5b5, 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttom image (label) */
+button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  /* Blasts the image up past its internal padding.
+     Adjust 1.2 (120%) up or down depending on how much padding your PNGs have. */
+  transform: scale(1.8);
+  overflow: hidden;
+}
+
+/* Button hover animation */
+button:hover {
+  background: blue;
+}
+
+/* Button click animation */
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 #b5b5b5, 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Button focus animation */
+button:focus-visible {
+  outline: 2px solid #0076ff;
+  outline-offset: 3px;
+}
