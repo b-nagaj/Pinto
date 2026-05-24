@@ -5,14 +5,11 @@
  */
 
 import { Component, input } from "@angular/core";
-import { RouterOutlet, Router } from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "app-keycap",
     standalone: true,
-    imports: [
-        RouterOutlet
-    ],
     templateUrl: "./keycap.html",
     styleUrl: "./keycap.scss",
 })

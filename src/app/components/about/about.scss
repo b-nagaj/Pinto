@@ -1,0 +1,45 @@
+/**
+ * =============================================================================
+ * @description: Styling for the `app-about` component
+ * =============================================================================
+ */
+
+/* Wrapper for the primary content container */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 15%;
+}
+
+ /* Container for primary content */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 60%;
+
+  p-terminal {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* Profile picture */
+:host ::ng-deep .circular-profile {
+  flex: 0 0 25%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
