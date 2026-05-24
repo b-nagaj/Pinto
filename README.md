@@ -12,7 +12,6 @@
 
 Bryce Nagaj's personal website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
 ## Prerequisites
 
@@ -28,6 +27,14 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 npm install
 ```
 
+## Run
+
+*How do I run the project on a local development server?*
+
+```shell
+ng serve
+```
+
 ## Build
 
 *How do I build from source?*
@@ -36,10 +43,3 @@ npm install
 ng build
 ```
 
-## Run
-
-*How do I run the project on a local development server?*
-
-```shell
-ng serve
-```
