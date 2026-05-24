@@ -5,7 +5,7 @@
  */
 
 import { Component, OnInit } from "@angular/core";
-import { RouterOutlet, Router } from "@angular/router";
+import { Router } from "@angular/router";
 
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
@@ -13,7 +13,6 @@ import { MenuItem } from 'primeng/api';
 @Component({
 	selector: "app-menubar",
 	imports: [
-		RouterOutlet,
 		MenubarModule
 	],
 	templateUrl: "./menubar.html",
