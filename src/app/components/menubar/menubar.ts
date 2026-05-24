@@ -20,6 +20,8 @@ import { MenuItem } from 'primeng/api';
 	styleUrl: "./menubar.scss",
 })
 export class Menubar implements OnInit {
+	public readonly fsfBadge: string = "assets/badges/fsfBadge.png"
+
 	public items: MenuItem[] | undefined;
 
 	/**

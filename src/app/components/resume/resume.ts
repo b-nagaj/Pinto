@@ -22,7 +22,7 @@ import { DownloadFile } from "../../services/download-file/download-file"
 	standalone: true
 })
 export class Resume {
-	public readonly resumeFilePath: string = "assets/resume.pdf";
+	public readonly resumeFilePath: string = "assets/docs/resume.pdf";
 	public readonly resumeFilename: string = "BryceNagajResume.pdf"
 
 	/**

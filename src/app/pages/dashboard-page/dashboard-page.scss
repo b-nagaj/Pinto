@@ -25,17 +25,17 @@
   margin: 0;
   font-size: 1.25rem;
   font-weight: 400;
-  color: #888888;
+  color: var(--color-alternate-text);
   line-height: 1.6;
 
   a {
-    color: #0076ff;
+    color: var(--color-alternate-background);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.15s ease;
 
     &:hover {
-      color: #3b9eff;
+      color: var(--color-link-text);
       text-decoration: underline;
     }
   }

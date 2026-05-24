@@ -4,4 +4,23 @@
  * =============================================================================
  */
 
- @import "primeicons/primeicons.css";
+@import "primeicons/primeicons.css";
+
+:root {
+	--color-primary-background: #32302f;
+	--color-alternate-background: #fe8019;
+	--color-primary-text: #F2F0EF;
+	--color-alternate-text: #928374;
+	--color-link-text: #83a598;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+
+	/* Colors */
+	background-color: var(--color-primary-background);
+	color: var(--color-primary-text);
+}

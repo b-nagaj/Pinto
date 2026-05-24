@@ -13,8 +13,8 @@
 /* Footer container */
 .app-footer {
   padding: 1.5rem 2rem;
-  background-color: transparent;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #1d2021;
+  border-top: 1px solid var(--color-alternate-background);
   font-size: 0.875rem;
   color: #888888;
 }
@@ -37,11 +37,12 @@
   text-align: center;
 
   a {
-    color: #0076ff;
+    color: var(--color-alternate-background);
     text-decoration: none;
     font-weight: 500;
 
     &:hover {
+      color: var(--color-link-text);
       text-decoration: underline;
     }
   }
@@ -56,12 +57,12 @@
   justify-content: center;
 
   a {
-    color: #0076ff; /* Matches your focus ring theme tint */
+    color: var(--color-alternate-background);
     text-decoration: none;
     transition: color 0.15s ease;
 
     &:hover {
-      color: #3b9eff;
+      color: var(--color-link-text);
       text-decoration: underline;
     }
   }
@@ -72,11 +73,5 @@
   font-size: 0.9rem;
   vertical-align: middle;
   margin: 0 0.15rem;
-  color: #2c94fc;
-}
-
-/* Separator '|' character */
-.separator {
-  color: #444444;
-  user-select: none;
+  color: var(--color-alternate-background);
 }

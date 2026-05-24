@@ -4,6 +4,15 @@
  * =============================================================================
  */
 
+:host {
+  --p-button-primary-background: var(--color-alternate-background);
+  --p-button-primary-border-color: var(--color-alternate-background);
+  --p-button-primary-hover-color: black;
+  --p-button-primary-hover-background: var(--color-link-text);
+  --p-button-primary-hover-border-color: var(--color-link-text);
+
+}
+
 /* Aligns the download button */
 .download-btn {
 	display: flex;
@@ -18,4 +27,5 @@
 	margin-right: 7.5%;
 	margin-left: 7.5%;
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 }

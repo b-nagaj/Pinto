@@ -15,14 +15,14 @@ button {
   width: 64px;
   height: 64px;
   border: none;
-  background: red;
+  background: var(--color-alternate-background);
   border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.1s ease, transform 0.1s ease;
-  box-shadow: 0 4px 0 #b5b5b5, 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 0 var(--color-alternate-text), 0 1px 5px;
 }
 
 /* Buttom image (label) */
@@ -36,17 +36,10 @@ button img {
 
 /* Button hover animation */
 button:hover {
-  background: blue;
+  background: var(--color-link-text);
 }
 
 /* Button click animation */
 button:active {
   transform: translateY(4px);
-  box-shadow: 0 0px 0 #b5b5b5, 0 1px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* Button focus animation */
-button:focus-visible {
-  outline: 2px solid #0076ff;
-  outline-offset: 3px;
 }
