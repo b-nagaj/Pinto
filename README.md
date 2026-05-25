@@ -12,7 +12,6 @@
 
 Bryce Nagaj's personal website
 
-
 ## Prerequisites
 
 *What tools do I need to have installed?*
@@ -43,3 +42,15 @@ ng serve
 ng build
 ```
 
+## Developer Tools
+
+*Which tools were used to build this project?*
+
+- [Angular](https://angular.dev/) The framework for building scalable web apps
+with confidence
+- [PrimeNg](https://primeng.org/) The next-gen UI suite for Angular
+- [Node.js](https://nodejs.org/en) A free, open-source, cross platform JavaScript
+runtime
+- [ng2-pdf-viewer](https://www.npmjs.com/package/ng2-pdf-viewer) PDF viewer
+component for Angular 5+
+- [Prettier](https://prettier.io/) An opinionated code formatter
