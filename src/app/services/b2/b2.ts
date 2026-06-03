@@ -1,6 +1,6 @@
 /**
  * =============================================================================
- * @description Retrieves a file from a Backblaze cloud storage bucket
+ * @description Retrieves a file from a Backblaze (B2) cloud storage bucket
  * =============================================================================
  */
 
