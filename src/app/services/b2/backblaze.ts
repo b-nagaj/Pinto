@@ -9,4 +9,8 @@ import { Injectable } from "@angular/core";
 @Injectable({
 	providedIn: "root",
 })
-export class Backblaze {}
+export class B2 {
+	public authenticate() {
+
+	}
+}

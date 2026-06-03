@@ -6,14 +6,14 @@
 
 import { TestBed } from "@angular/core/testing";
 
-import { Backblaze } from "./backblaze";
+import { B2 } from "./backblaze";
 
-describe("Backblaze", () => {
-	let service: Backblaze;
+describe("B2", () => {
+	let service: B2;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({});
-		service = TestBed.inject(Backblaze);
+		service = TestBed.inject(B2);
 	});
 
 	it("should be created", () => {
