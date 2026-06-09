@@ -1,19 +1,19 @@
 /**
  * =============================================================================
- * @description Unit testing for the 'B2' service
+ * @description Unit testing for the `Resume` service
  * =============================================================================
  */
 
 import { TestBed } from "@angular/core/testing";
 
-import { B2 } from "./b2";
+import { Resume } from "./resume";
 
-describe("B2", () => {
-	let service: B2;
+describe("Resume", () => {
+	let service: Resume;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({});
-		service = TestBed.inject(B2);
+		service = TestBed.inject(Resume);
 	});
 
 	it("should be created", () => {

@@ -4,17 +4,20 @@
 ================================================================================
 !-->
 
+<div *ngIf="isLoading">Downloading PDF from Backblaze B2...</div>
+
 <div class="download-btn">
 	<p-button
 		label="Download"
-		icon="pi pi-download"
-		(onClick)="onDownloadBtnClick()">
+		icon="pi pi-download">
 	</p-button>
 </div>
 
-<div class="resume-container">
+<div
+	*ngIf="pdfSrc"
+	class="resume-container">
 	<pdf-viewer
-	  	[src]="resumeFilePath"
+	  	[src]="pdfSrc"
 	  	[render-text]="true"
 	 	[original-size]="false"
 	  	style="width: 100%; height: 90vh; display: block;">
