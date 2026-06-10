@@ -6,7 +6,6 @@
 
 import { Injectable } from "@angular/core";
 
-
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
@@ -32,7 +31,7 @@ export class Toast {
             severity: 'error',
             summary: 'Error',
             detail: detail,
-            key: 'bl',
+            key: 'tc',
             life: 3000
         });
 	}
