@@ -12,16 +12,18 @@
 <div class="download-btn">
 	<p-button
 		label="Download"
-		icon="pi pi-download">
+		icon="pi pi-download"
+		[disabled]="isLoading"
+		(click)=onDownloadBtnClick()>
 	</p-button>
 </div>
 <div
-	*ngIf="pdfSrc"
+	*ngIf="!isLoading && pdfSrc"
 	class="resume-container">
 	<pdf-viewer
-	  	[src]="pdfSrc"
-	  	[render-text]="true"
-	 	[original-size]="false"
-	  	style="width: 100%; height: 90vh; display: block;">
+		[src]="pdfSrc"
+		[render-text]="true"
+		[original-size]="false"
+		style="width: 100%; height: 90vh; display: block;">
 	</pdf-viewer>
 </div>

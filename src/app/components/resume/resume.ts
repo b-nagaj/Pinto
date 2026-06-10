@@ -28,6 +28,8 @@ import { Toast } from "../../services/toast/toast"
 	standalone: true
 })
 export class Resume implements OnInit {
+	public readonly resumeFileName = "Nagaj_Resume.pdf"
+
 	public pdfSrc: Uint8Array | null = null;
 	public isLoading: boolean = true;
 
@@ -72,7 +74,11 @@ export class Resume implements OnInit {
 	 * @brief Downloads the resume PDF source
 	 * @description Downloads the PDF source by means of the DownloadFile service
 	 */
-	// public onDownloadBtnClick() {
-	// 	this.downloadFileService.downloadFile(this.resumeFilePath, this.resumeFilename);
-	// }
+	public onDownloadBtnClick() {
+		if (this.pdfSrc) {
+	        this.downloadFileService.downloadFile(this.pdfSrc, this.resumeFileName);
+	    } else {
+	        this.toastService.showError("Resume data is not ready for download yet.");
+	    }
+	}
 }

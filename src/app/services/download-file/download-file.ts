@@ -12,28 +12,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DownloadFile {
 	/**
-	 * @brief Constructor
-	 * @description Instantiates a new HttpClient
-	 * @param an HttpClient object
-	 */
-	constructor(private http: HttpClient) {}
-
-	/**
-	 * @brief Downloads a file onto the user's local machine
+	 * @brief Downloads a file onto the user's machine
 	 * @description Downloads a file on the user's local machine by creating
 	 *              a hidden link and clicking it to trigger a browser download
-	 * @param filePath The path of the file to download, in string format
-	 * @param fileName The name of the downloaded asset, in string formatp
+	 * @param bytes a Byte array that represents the file
+	 * @param fileName The name of the downloaded asset, in string format
 	 */
-	public downloadFile(filePath: string, fileName: string) {
-	    this.http.get(filePath, { responseType: 'blob' }).subscribe((data: Blob) => {
-	        const downloadUrl: string = window.URL.createObjectURL(data);
-	        const link: HTMLAnchorElement = document.createElement('a');
-	        link.href = downloadUrl;
-	        link.download = fileName;
-	        document.body.appendChild(link);
-	        link.click();
-	        document.body.removeChild(link);
-	      });
+	public downloadFile(bytes: Uint8Array, fileName: string) {
+		if (!bytes || bytes.length == 0) {
+			console.error("Failed to download file\nError: Byte payload is missing or empty");
+
+			return;
+		}
+
+		const blob = new Blob([bytes as BlobPart], { type: "application/pdf" });
+		const downloadUrl: string = window.URL.createObjectURL(blob);
+		const link: HTMLAnchorElement = document.createElement('a');
+		link.href = downloadUrl;
+		link.download = fileName;
+		document.body.appendChild(link);
+		link.click();
+
+		document.body.removeChild(link);
+		window.URL.revokeObjectURL(downloadUrl);
 	}
 }
