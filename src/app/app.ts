@@ -7,6 +7,8 @@
 import { Component, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
+import { ToastModule } from 'primeng/toast';
+
 import { Menubar } from "./components/menubar/menubar"
 import { Keycap } from "./components/keycap/keycap"
 import { Footer } from "./components/footer/footer"
@@ -18,7 +20,8 @@ import { Footer } from "./components/footer/footer"
 		Menubar,
 		Keycap,
 		Footer,
-		RouterOutlet
+		RouterOutlet,
+		ToastModule
 	],
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",
