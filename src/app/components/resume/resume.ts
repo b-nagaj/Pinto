@@ -13,6 +13,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { DownloadFile } from "../../services/download-file/download-file"
 import { Resume as ResumeService } from "../../services/resume/resume"
+import { Toast } from "../../services/toast/toast"
 
 @Component({
 	selector: "app-resume",
@@ -35,11 +36,12 @@ export class Resume implements OnInit {
 	 * @description Instantiates an HttpClient and DownloadFile services
 	 * @param downloadFileService a DownloadFile object
 	 * @param resumeService a ResumeService object
-	 * @param toast a Toast object
+	 * @param toastService a Toast object
 	 */
 	constructor(
 		private resumeService: ResumeService,
-		private downloadFileService: DownloadFile) {}
+		private downloadFileService: DownloadFile,
+		private toastService: Toast) {}
 
 	/**
 	 * @brief Initialization
@@ -49,13 +51,18 @@ export class Resume implements OnInit {
 		this.loadPdf();
 	}
 
+	/**
+	 * @brief Loads a PDF
+	 * @description Invokes the Resume service to download a PDF from Backblaze
+	 */
 	public async loadPdf(): Promise<void> {
 		try {
 			this.isLoading = true;
 			const pdfBytes: Uint8Array = await this.resumeService.downloadResume();
 			this.pdfSrc = pdfBytes;
 		} catch (error: any) {
-      		console.error("B2 PDF initialization error: ", error);
+			const errorMessage: string = "Failed to download resume";
+			this.toastService.showError(errorMessage);
 		} finally {
 			this.isLoading = false;
 		}
