@@ -61,7 +61,7 @@ export class Resume implements OnInit {
 			const pdfBytes: Uint8Array = await this.resumeService.downloadResume();
 			this.pdfSrc = pdfBytes;
 		} catch (error: any) {
-			const errorMessage: string = "Failed to download resume";
+			const errorMessage: string = error?.message || "Failed to download resume";
 			this.toastService.showError(errorMessage);
 		} finally {
 			this.isLoading = false;

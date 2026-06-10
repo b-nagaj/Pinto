@@ -12,9 +12,44 @@ import { environment } from "../../../environments/environment"
 	providedIn: "root",
 })
 export class Resume {
+	private resumePromise: Promise<Uint8Array> | null = null;
+
 	/**
-	 * @brief Downloads a PDF
-	 * @description Read a PDF from a Backblaze cloud storage bucket into a byte
+	 * @brief Coordinates fetching a resume
+	 * @description Eagerly fetches a resume PDF from a Backblaze cloud storage
+	 *              bucket
+	 */
+	constructor() {
+		this.preloadResume();
+	}
+
+	/**
+	 * @brief Pre-loads a PDF document
+	 * @description Siliently initiates the download process and caches the
+	 *              promise chain
+	 */
+	public preloadResume() {
+		if (!this.resumePromise) {
+			this.resumePromise = this.downloadResume();
+		}
+	}
+
+	/**
+	 * @brief Exposes PDF document cache
+	 * @description Exposes the cached PDF byte array to consumers
+	 * @return Uint8Array
+	 */
+	public async cacheResume() {
+		if (!this.resumePromise) {
+			this.preloadResume();
+		}
+
+		return this.resumePromise;
+	}
+
+	/**
+	 * @brief Downloads a PDF document
+	 * @description Reads a PDF from a Backblaze cloud storage bucket into a byte
 	 *              array by calling Basil's `/resume/download` endpoint
 	 * @return Uint8Array
 	 */

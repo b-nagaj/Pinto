@@ -12,6 +12,7 @@ import { ToastModule } from 'primeng/toast';
 import { Menubar } from "./components/menubar/menubar"
 import { Keycap } from "./components/keycap/keycap"
 import { Footer } from "./components/footer/footer"
+import { Resume } from "./services/resume/resume"
 
 @Component({
     selector: "app-root",
@@ -28,4 +29,11 @@ import { Footer } from "./components/footer/footer"
 })
 export class App {
 	protected readonly title = signal("pinto");
+
+	/**
+	 * @brief Constructor
+	 * @description Instantiates the resume service
+	 * @param resumeService a Resume object
+	 */
+	constructor(private resumeService: Resume) {}
 }
