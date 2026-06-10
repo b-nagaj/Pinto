@@ -4,7 +4,11 @@
 ================================================================================
 !-->
 
-<div *ngIf="isLoading">Downloading PDF from Backblaze B2...</div>
+<div
+	*ngIf="isLoading"
+	class="spinner-container-fullscreen">
+	<p-progress-spinner ariaLabel="loading" />
+</div>
 
 <div class="download-btn">
 	<p-button

@@ -9,6 +9,7 @@ import { NgIf } from "@angular/common"
 
 import { PdfViewerModule } from "ng2-pdf-viewer";
 import { ButtonModule } from 'primeng/button';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { DownloadFile } from "../../services/download-file/download-file"
 import { Resume as ResumeService } from "../../services/resume/resume"
@@ -19,6 +20,7 @@ import { Resume as ResumeService } from "../../services/resume/resume"
 		NgIf,
 		PdfViewerModule,
 		ButtonModule,
+		ProgressSpinnerModule
 	],
 	templateUrl: "./resume.html",
 	styleUrl: "./resume.scss",
@@ -33,8 +35,11 @@ export class Resume implements OnInit {
 	 * @description Instantiates an HttpClient and DownloadFile services
 	 * @param downloadFileService a DownloadFile object
 	 * @param resumeService a ResumeService object
+	 * @param toast a Toast object
 	 */
-	constructor(private resumeService: ResumeService, private downloadFileService: DownloadFile) {}
+	constructor(
+		private resumeService: ResumeService,
+		private downloadFileService: DownloadFile) {}
 
 	/**
 	 * @brief Initialization
