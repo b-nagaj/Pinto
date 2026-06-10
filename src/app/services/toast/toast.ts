@@ -1,19 +1,17 @@
 /**
  * =============================================================================
- * @description Logic for the 'app-toast' component
+ * @description Displays a toast message as an overlay during error conditions
  * =============================================================================
  */
 
-import { Component } from "@angular/core";
+import { Injectable } from "@angular/core";
+
 
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
-@Component({
-	selector: "app-toast",
-	imports: [ToastModule],
-	templateUrl: "./toast.html",
-	styleUrl: "./toast.scss",
+@Injectable({
+	providedIn: "root",
 })
 export class Toast {
 	/**
