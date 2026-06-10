@@ -16,6 +16,7 @@ import {
 
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
+import { MessageService } from 'primeng/api'
 
 import { routes } from "./app.routes";
 
@@ -23,11 +24,11 @@ export const appConfig: ApplicationConfig = {
 	providers: [
 		provideBrowserGlobalErrorListeners(),
 		provideRouter(routes),
-		provideClientHydration(withEventReplay()),
 		providePrimeNG({
 			theme: {
 				preset: Aura
 			}
-		})
+		}),
+		MessageService
 	],
 };
