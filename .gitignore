@@ -27,6 +27,7 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
+public/assets/docs/*.pdf
 
 # ------------------------------------------------------------------------------
 # Text editor and IDE specific configuration files
