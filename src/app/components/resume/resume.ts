@@ -6,8 +6,8 @@
 
 import { Component } from "@angular/core";
 
-import { PdfViewerModule } from "ng2-pdf-viewer";
 import { ButtonModule } from 'primeng/button';
+import { PdfViewerModule } from "ng2-pdf-viewer";
 
 import { DownloadFile } from "../../services/download-file/download-file"
 

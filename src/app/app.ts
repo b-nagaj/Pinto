@@ -7,9 +7,9 @@
 import { Component, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
-import { Menubar } from "./components/menubar/menubar"
-import { Keycap } from "./components/keycap/keycap"
 import { Footer } from "./components/footer/footer"
+import { Keycap } from "./components/keycap/keycap"
+import { Menubar } from "./components/menubar/menubar"
 
 @Component({
     selector: "app-root",

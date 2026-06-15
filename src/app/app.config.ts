@@ -14,8 +14,8 @@ import {
 	withEventReplay,
 } from "@angular/platform-browser";
 
-import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
+import { providePrimeNG } from 'primeng/config';
 
 import { routes } from "./app.routes";
 
