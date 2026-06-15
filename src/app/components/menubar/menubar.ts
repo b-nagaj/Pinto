@@ -7,8 +7,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
-import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar';
 
 @Component({
 	selector: "app-menubar",

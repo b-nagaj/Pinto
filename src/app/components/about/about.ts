@@ -4,11 +4,11 @@
  * =============================================================================
  */
 
-import { Component, Inject, OnDestroy } from "@angular/core";
+import { Component, OnDestroy } from "@angular/core";
 
+import { ImageModule } from 'primeng/image';
 import { Subscription } from 'rxjs';
 import { TerminalModule, TerminalService } from 'primeng/terminal';
-import { ImageModule } from 'primeng/image';
 
 @Component({
 	selector: "app-about",
