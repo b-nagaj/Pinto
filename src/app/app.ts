@@ -8,7 +8,6 @@ import { Component, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
 import { Footer } from "./components/footer/footer"
-import { Keycap } from "./components/keycap/keycap"
 import { Menubar } from "./components/menubar/menubar"
 
 @Component({
@@ -16,7 +15,6 @@ import { Menubar } from "./components/menubar/menubar"
 	standalone: true,
 	imports: [
 		Menubar,
-		Keycap,
 		Footer,
 		RouterOutlet
 	],
