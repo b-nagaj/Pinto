@@ -4,7 +4,7 @@
  * =============================================================================
  */
 
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { MenuItem } from 'primeng/api';
@@ -39,6 +39,7 @@ export class Menubar implements OnInit {
 			{
 				label: "Home",
 				icon: "pi pi-home",
+				badge: "Alt+H",
 				command: () => {
 					this.router.navigate(['/', 'dashboard']);
 				}
@@ -46,6 +47,7 @@ export class Menubar implements OnInit {
 			{
 				label: "Resume",
 				icon: "pi pi-briefcase",
+				badge: "Alt+R",
 				command: () => {
 					this.router.navigate(['/resume'])
 				}
@@ -53,13 +55,46 @@ export class Menubar implements OnInit {
 			{
 				label: "GitHub",
 				icon: "pi pi-github",
+				badge: "Alt+G",
 				url: "https://github.com/b-nagaj"
 			},
 			{
 				label: "Contact",
 				icon: "pi pi-envelope",
+				badge: "Alt+C",
 				url: "mailto:bryce.nagaj@keysight.com"
 			}
 		]
 	}
+
+	// Navigation handlers
+	  goToHome() { this.router.navigate(['/', 'dashboard']); }
+	  goToResume() { this.router.navigate(['/resume']); }
+	  openGitHub() { window.open('https://github.com/b-nagaj', '_blank'); }
+	  openContact() { window.location.href = 'mailto:bryce.nagaj@keysight.com'; }
+
+	  // Global Key Listener
+	  @HostListener('document:keydown', ['$event'])
+	  handleKeyboardEvent(event: KeyboardEvent) {
+	    if (!event.altKey) return;
+
+	    switch (event.key.toLowerCase()) {
+	      case 'h':
+	        event.preventDefault();
+	        this.goToHome();
+	        break;
+	      case 'r':
+	        event.preventDefault();
+	        this.goToResume();
+	        break;
+	      case 'g':
+	        event.preventDefault();
+	        this.openGitHub();
+	        break;
+	      case 'c':
+	        event.preventDefault();
+	        this.openContact();
+	        break;
+	    }
+	  }
 }

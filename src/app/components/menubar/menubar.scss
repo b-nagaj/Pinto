@@ -11,3 +11,15 @@
 	--p-menubar-item-icon-focus-color: black;
 	--p-menubar-item-focus-color: black;
 }
+
+/* Target PrimeNG badges inside the menubar directly */
+:host ::ng-deep .p-menubar .p-badge,
+:host ::ng-deep .p-menubar .p-menuitem-badge {
+	background-color: var(--color-alternate-background);
+	color: black;
+	font-size: 0.7rem;
+	padding: 0.2rem 0.45rem;
+	min-width: auto;
+	height: auto;
+	border-radius: 4px;
+}
