@@ -12,7 +12,6 @@
 	--p-menubar-item-focus-color: black;
 }
 
-/* Target PrimeNG badges inside the menubar directly */
 :host ::ng-deep .p-menubar .p-badge,
 :host ::ng-deep .p-menubar .p-menuitem-badge {
 	background-color: var(--color-alternate-background);
