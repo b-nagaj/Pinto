@@ -8,13 +8,13 @@ import { Component } from "@angular/core";
 
 import { DividerModule } from 'primeng/divider';
 
-import { About } from "../../components/about/about"
+import { Silhouette } from "../../components/silhouette/silhouette"
 
 @Component({
 	selector: "app-dashboard-page",
 	imports: [
 		DividerModule,
-		About
+		Silhouette
 	],
 	templateUrl: "./dashboard-page.html",
 	styleUrl: "./dashboard-page.scss",
