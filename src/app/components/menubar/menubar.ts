@@ -37,11 +37,27 @@ export class Menubar implements OnInit {
 	ngOnInit() {
 		this.items = [
 			{
-				label: "Home",
-				icon: "pi pi-home",
-				badge: "Alt+H",
+				label: "About",
+				icon: "pi pi-user",
+				badge: "Alt+A",
 				command: () => {
-					this.router.navigate(['/', 'dashboard']);
+					this.router.navigate(['/', 'about']);
+				}
+			},
+			{
+				label: "Experience",
+				icon: "pi pi-trophy",
+				badge: "Alt+E",
+				command: () => {
+					this.router.navigate(['/', 'experience'])
+				}
+			},
+			{
+				label: "Skills",
+				icon: "pi pi-hammer",
+				badge: "Alt+s",
+				command: () => {
+					this.router.navigate(['/', 'skills'])
 				}
 			},
 			{
@@ -49,7 +65,7 @@ export class Menubar implements OnInit {
 				icon: "pi pi-briefcase",
 				badge: "Alt+R",
 				command: () => {
-					this.router.navigate(['/resume'])
+					this.router.navigate(['/', 'resume'])
 				}
 			},
 			{
@@ -63,7 +79,7 @@ export class Menubar implements OnInit {
 				icon: "pi pi-envelope",
 				badge: "Alt+C",
 				url: "mailto:bryce.nagaj@keysight.com"
-			}
+			},
 		]
 	}
 
