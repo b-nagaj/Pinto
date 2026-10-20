@@ -1,0 +1,79 @@
+<!--
+================================================================================
+@description: Template for the `app-skill-page` component
+================================================================================
+!-->
+
+<div class="page-container">
+  <div class="section-container">
+    <div class="section-header">
+      <i class="pi pi-cog section-icon"></i>
+      <span class="section-subtitle">Programming Languages</span>
+    </div>
+
+    <div class="skill-cards-grid">
+      @for (card of skillCardContent; track card.name) {
+        <app-skill-card
+          [name]="card.name"
+          [icon]="card.icon"
+          [url]="card.url"
+          [altName]="card.altName">
+        </app-skill-card>
+      }
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <i class="pi pi-cog section-icon"></i>
+      <span class="section-subtitle">Frameworks</span>
+    </div>
+
+    <div class="skill-cards-grid">
+      @for (card of skillCardContent; track card.name) {
+        <app-skill-card
+          [name]="card.name"
+          [icon]="card.icon"
+          [url]="card.url"
+          [altName]="card.altName">
+        </app-skill-card>
+      }
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <i class="pi pi-cog section-icon"></i>
+      <span class="section-subtitle">Tools</span>
+    </div>
+
+    <div class="skill-cards-grid">
+      @for (card of skillCardContent; track card.name) {
+        <app-skill-card
+          [name]="card.name"
+          [icon]="card.icon"
+          [url]="card.url"
+          [altName]="card.altName">
+        </app-skill-card>
+      }
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <i class="pi pi-hammer section-icon"></i>
+      <span class="section-subtitle">Operating Systems</span>
+    </div>
+
+    <div class="skill-cards-grid">
+      @for (card of skillCardContent; track card.name) {
+        <app-skill-card
+          [name]="card.name"
+          [icon]="card.icon"
+          [url]="card.url"
+          [altName]="card.altName">
+        </app-skill-card>
+      }
+    </div>
+  </div>
+</div>

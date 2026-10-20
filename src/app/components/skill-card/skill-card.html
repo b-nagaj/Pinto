@@ -1,0 +1,23 @@
+<!--
+================================================================================
+@description: Template for the `app-skill-card` component
+================================================================================
+!-->
+
+<a
+  [href]="url"
+  [title]="altName"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="skill-card"
+>
+  <div class="card-content">
+    <div class="icon-container">
+      <img [src]="icon" [alt]="altName" class="icon-image" />
+    </div>
+
+    <div class="title-container">
+      <span class="card-title p-component">{{ name }}</span>
+    </div>
+  </div>
+</a>

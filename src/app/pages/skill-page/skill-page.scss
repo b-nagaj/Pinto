@@ -1,0 +1,53 @@
+/**
+ * =============================================================================
+ * @description: Styling for the `app-skill-page` component
+ * =============================================================================
+ */
+
+.page-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section-container {
+  margin-bottom: 2.5rem;
+}
+
+.skill-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2.5rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  font-size: 1.1rem;
+  color: var(--color-primary-text)}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}

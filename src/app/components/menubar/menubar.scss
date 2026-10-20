@@ -5,11 +5,10 @@
  */
 
 :host {
-	--p-menubar-background: #1d2021;
+	--p-menubar-background: var(--color-ternary-background);
 	--p-menubar-border-color: var(--color-alternate-background);
-	--p-menubar-item-focus-background: var(--color-link-text);
-	--p-menubar-item-icon-focus-color: black;
-	--p-menubar-item-focus-color: black;
+	--p-menubar-item-focus-background: var(--color-ternary-background);
+	--p-menubar-item-focus-color: var(--color-primary-text);
 }
 
 :host ::ng-deep .p-menubar .p-badge,
@@ -21,4 +20,8 @@
 	min-width: auto;
 	height: auto;
 	border-radius: 4px;
+}
+
+:host ::ng-deep .p-menubar .p-menuitem-content {
+	transition: background-color 0.2s ease, border-color 0.2s ease;
 }

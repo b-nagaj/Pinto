@@ -1,0 +1,72 @@
+/**
+ * =============================================================================
+ * @description: Styling for the `app-skill-card` component
+ * =============================================================================
+ */
+
+.skill-card {
+  display: block;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: var(--color-ternary-background);
+  border-radius: 16px;
+  border: 1px solid var(--color-primary-background);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: var(--color-alternate-background);
+
+    .icon-image {
+      transform: scale(1.06);
+    }
+  }
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.icon-image {
+  max-width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.title-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  background: linear-gradient(to top, var(--color-alternate-background), var(--color-primary-background));
+  border-top: 1px solid var(--color-primary-text);
+}
+
+.card-title {
+  color: var(--primary-text-color);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
