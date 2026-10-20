@@ -45,19 +45,19 @@ export class Menubar implements OnInit {
 				}
 			},
 			{
+				label: "Skills",
+				icon: "pi pi-hammer",
+				badge: "Alt+S",
+				command: () => {
+					this.router.navigate(['/', 'skills'])
+				}
+			},
+			{
 				label: "Experience",
 				icon: "pi pi-trophy",
 				badge: "Alt+E",
 				command: () => {
 					this.router.navigate(['/', 'experience'])
-				}
-			},
-			{
-				label: "Skills",
-				icon: "pi pi-hammer",
-				badge: "Alt+s",
-				command: () => {
-					this.router.navigate(['/', 'skills'])
 				}
 			},
 			{
@@ -84,7 +84,9 @@ export class Menubar implements OnInit {
 	}
 
 	// Navigation handlers
-	  goToHome() { this.router.navigate(['/', 'dashboard']); }
+	  goToAbout() { this.router.navigate(['/', 'about']); }
+	  goToSkills() { this.router.navigate(['/', 'skills']); }
+	  goToExperience() { this.router.navigate(['/', 'experience']); }
 	  goToResume() { this.router.navigate(['/resume']); }
 	  openGitHub() { window.open('https://github.com/b-nagaj', '_blank'); }
 	  openContact() { window.location.href = 'mailto:bryce.nagaj@keysight.com'; }
@@ -95,10 +97,18 @@ export class Menubar implements OnInit {
 	    if (!event.altKey) return;
 
 	    switch (event.key.toLowerCase()) {
-	      case 'h':
+	      case 'a':
 	        event.preventDefault();
-	        this.goToHome();
+	        this.goToAbout();
 	        break;
+	      case 'e':
+	      	event.preventDefault();
+	      	this.goToExperience();
+	      	break;
+	      case 's':
+	      	event.preventDefault();
+	      	this.goToSkills();
+	      	break;
 	      case 'r':
 	        event.preventDefault();
 	        this.goToResume();
