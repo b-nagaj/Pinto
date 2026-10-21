@@ -221,7 +221,7 @@ export class SkillPage {
 
     public readonly operatingSystems: SkillCardContent[] = [
         {
-            name: "Debian 12/13",
+            name: "Debian",
             icon: "assets/icons/skills/debian.svg",
         },
         {
@@ -237,7 +237,7 @@ export class SkillPage {
             icon: "assets/icons/skills/macos.svg",
         },
         {
-            name: "Windows 10/11",
+            name: "Windows",
             icon: "assets/icons/skills/windows.svg",
         },
     ]   
