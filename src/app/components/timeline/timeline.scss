@@ -3,3 +3,140 @@
  * @brief styling for the 'app-timeline' component
  * =============================================================================
  */
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: var(--timeline-line-color, #e2e8f0);
+    transform: translateX(-50%);
+  }
+
+  .timeline-jobs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .timeline-job {
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+
+    &.timeline-job-left {
+      left: 0;
+      text-align: right;
+
+      .timeline-dot {
+        right: -8px;
+      }
+    }
+
+    &.timeline-job-right {
+      left: 50%;
+      text-align: left;
+
+      .timeline-dot {
+        left: -8px;
+      }
+    }
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 1.5rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--timeline-dot-color, #3b82f6);
+    border: 3px solid var(--timeline-bg-color, #ffffff);
+    box-shadow: 0 0 0 2px var(--timeline-line-color, #e2e8f0);
+    z-index: 10;
+  }
+
+  .timeline-content {
+    background: var(--card-bg, #ffffff);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    .timeline-period {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary-color, #3b82f6);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-role {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem 0;
+    }
+
+    .timeline-company {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted, #64748b);
+      margin: 0 0 1rem 0;
+    }
+
+    .timeline-description {
+      font-size: 0.95rem;
+      color: var(--text-color, #334155);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .timeline-bullets {
+      margin: 0;
+      padding-left: 1.25rem;
+      text-align: left;
+
+      li {
+        font-size: 0.9rem;
+        color: var(--text-color, #334155);
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    .timeline-line {
+      left: 20px;
+    }
+
+    .timeline-job {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 0;
+
+      &.timeline-job-left,
+      &.timeline-job-right {
+        left: 0;
+        text-align: left;
+      }
+
+      .timeline-dot {
+        left: 12px;
+      }
+
+      .timeline-bullets {
+        padding-left: 1.25rem;
+      }
+    }
+  }
+}

@@ -3,3 +3,23 @@
  @brief template for the 'app-timeline' component
  ===============================================================================
 !-->
+
+<div class="timeline-container">
+  <div class="timeline-line"></div>
+  <div class="timeline-jobs">
+    <div class="timeline-job" *ngFor="let job of jobs; let odd = odd" [class.timeline-job-left]="odd" [class.timeline-job-right]="!odd">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-period">
+          {{ job.period[0] | date: 'MMM yyyy' }} - {{ job.period[1] | date: 'MMM yyyy' }}
+        </span>
+        <h3 class="timeline-role">{{ job.role }}</h3>
+        <h4 class="timeline-company">{{ job.company }}</h4>
+        <p class="timeline-description">{{ job.description }}</p>
+        <ul class="timeline-bullets">
+          <li *ngFor="let bullet of job.bullets">{{ bullet }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
