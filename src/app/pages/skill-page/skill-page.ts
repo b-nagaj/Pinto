@@ -12,7 +12,7 @@ import { Skill } from "../../types/skill.model"
 
 @Component({
     selector: "app-skill-page",
-    imports: [CommonModule, DividerModule, SkillCard, Skill],
+    imports: [CommonModule, DividerModule, SkillCard],
     templateUrl: "./skill-page.html",
     styleUrl: "./skill-page.scss",
 })

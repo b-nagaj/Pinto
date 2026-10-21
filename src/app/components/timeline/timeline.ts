@@ -17,5 +17,5 @@ import { Job } from "../../types/job.model"
 	standalone: true
 })
 export class Timeline {
-	@Input() jobs: Jobs[] = [];
+	@Input() jobs: Job[] = [];
 }

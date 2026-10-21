@@ -7,6 +7,7 @@
 export interface Job {
     role: string;
     company: string;
-    period: Date[];
-    description: string;
+    startDate: Date;
+    endDate: Date;
+    description: string[];
 }
