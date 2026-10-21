@@ -4,7 +4,7 @@
  * =============================================================================
  */
 
-export interface skill {
+export interface Skill {
     name: string;
     icon: string
 }
