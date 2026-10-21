@@ -12,12 +12,10 @@
     </div>
 
     <div class="skill-cards-grid">
-      @for (card of skillCardContent; track card.name) {
+      @for (card of languages; track card.name) {
         <app-skill-card
           [name]="card.name"
-          [icon]="card.icon"
-          [url]="card.url"
-          [altName]="card.altName">
+          [icon]="card.icon">
         </app-skill-card>
       }
     </div>
@@ -30,12 +28,10 @@
     </div>
 
     <div class="skill-cards-grid">
-      @for (card of skillCardContent; track card.name) {
+      @for (card of frameworks; track card.name) {
         <app-skill-card
           [name]="card.name"
-          [icon]="card.icon"
-          [url]="card.url"
-          [altName]="card.altName">
+          [icon]="card.icon">
         </app-skill-card>
       }
     </div>
@@ -48,12 +44,26 @@
     </div>
 
     <div class="skill-cards-grid">
-      @for (card of skillCardContent; track card.name) {
+      @for (card of tools; track card.name) {
         <app-skill-card
           [name]="card.name"
-          [icon]="card.icon"
-          [url]="card.url"
-          [altName]="card.altName">
+          [icon]="card.icon">
+        </app-skill-card>
+      }
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <i class="pi pi-hammer section-icon"></i>
+      <span class="section-subtitle">Data</span>
+    </div>
+
+    <div class="skill-cards-grid">
+      @for (card of data; track card.name) {
+        <app-skill-card
+          [name]="card.name"
+          [icon]="card.icon">
         </app-skill-card>
       }
     </div>
@@ -66,12 +76,10 @@
     </div>
 
     <div class="skill-cards-grid">
-      @for (card of skillCardContent; track card.name) {
+      @for (card of operatingSystems; track card.name) {
         <app-skill-card
           [name]="card.name"
-          [icon]="card.icon"
-          [url]="card.url"
-          [altName]="card.altName">
+          [icon]="card.icon">
         </app-skill-card>
       }
     </div>

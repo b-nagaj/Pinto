@@ -12,7 +12,7 @@ import { Component } from "@angular/core";
 	styleUrl: "./footer.scss",
 })
 export class Footer {
-	public readonly copyleftIcon: string = "assets/icons/copyleftIcon.svg"
+	public readonly copyleftIcon: string = "assets/icons/about/copyleftIcon.svg"
 
 	public currentYear: number = new Date().getFullYear();
 }

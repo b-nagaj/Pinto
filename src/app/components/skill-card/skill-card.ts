@@ -17,7 +17,4 @@ import { CommonModule } from "@angular/common"
 export class SkillCard {
 	@Input({ required: true }) name!: string;
 	@Input({ required: true }) icon!: string;
-	@Input({ required: true }) url!: string;
-	@Input({ required: true }) altName!: string;
-
 }
