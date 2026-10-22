@@ -6,9 +6,11 @@
 
 import { Component } from "@angular/core";
 
+import { AdventurelandRegistrationForm } from "../../components/adventureland-registration-form/adventureland-registration-form"
+
 @Component({
 	selector: "app-adventureland-page",
-	imports: [],
+	imports: [AdventurelandRegistrationForm],
 	templateUrl: "./adventureland-page.html",
 	styleUrl: "./adventureland-page.scss",
 })
