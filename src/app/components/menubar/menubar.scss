@@ -8,7 +8,7 @@
 	--p-menubar-background: var(--color-ternary-background);
 	--p-menubar-border-color: var(--color-alternate-background);
 	--p-menubar-item-focus-background: var(--color-ternary-background);
-	--p-menubar-item-focus-color: var(--color-primary-text);
+	--p-menubar-item-focus-color: var(--color-link-text);
 }
 
 :host ::ng-deep .p-menubar .p-badge,
