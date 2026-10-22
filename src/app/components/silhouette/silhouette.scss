@@ -25,6 +25,12 @@
 ::ng-deep .silhouette img {
   width: 350px;
   height: 350px;
+  max-width: 100%;
   object-fit: cover;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 175px;
+    height: 175px;
+  }
 }
