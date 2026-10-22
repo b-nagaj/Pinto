@@ -4,4 +4,96 @@
 ================================================================================
 !-->
 
-<p>adventureland-registration-form works!</p>
+<div class="form-container">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-form">
+    <h2 class="title">Minecraft Server Registration</h2>
+    <p class="description">Please request access to Bryce's Minecraft game server</p>
+    
+    <div>
+      <label for="firstName" class="description">First Name</label>
+      <input 
+        pInputText 
+        id="firstName" 
+        formControlName="firstName" 
+        placeholder="John" 
+        class="w-full"
+        [ngClass]="{'ng-invalid ng-dirty': isFieldInvalid('firstName')}" 
+      />
+      <small *ngIf="isFieldInvalid('firstName')" class="p-error">
+        First name is required.
+      </small>
+    </div>
+
+    <!-- Last Name Field -->
+    <div>
+      <label for="lastName" class="description">Last Name</label>
+      <input 
+        pInputText 
+        id="lastName" 
+        formControlName="lastName" 
+        placeholder="Doe" 
+        class="w-full"
+        [ngClass]="{'ng-invalid ng-dirty': isFieldInvalid('lastName')}" 
+      />
+      <small *ngIf="isFieldInvalid('lastName')" class="p-error">
+        Last name is required.
+      </small>
+    </div>
+
+    <div>
+      <label for="email" class="description">Email Address</label>
+      <input 
+        pInputText 
+        id="email" 
+        type="email" 
+        formControlName="email" 
+        placeholder="john@example.com" 
+        class="w-full"
+        [ngClass]="{'ng-invalid ng-dirty': isFieldInvalid('email')}" 
+      />
+      <small *ngIf="isFieldInvalid('email')" class="p-error">
+        Please enter a valid email address.
+      </small>
+    </div>
+
+    <div>
+      <label for="mojangUsername" class="description">Mojang Account Username</label>
+      <input 
+        pInputText 
+        id="mojangUsername" 
+        formControlName="mojangUsername" 
+        placeholder="Notch" 
+        class="w-full"
+        [ngClass]="{'ng-invalid ng-dirty': isFieldInvalid('mojangUsername')}" 
+      />
+      <small *ngIf="isFieldInvalid('mojangUsername')" class="p-error">
+        Mojang username is required.
+      </small>
+    </div>
+
+    <div>
+      <label for="ipv4Address" class="description">Public IPv4 Address</label>
+      <input 
+        pInputText 
+        id="ipv4Address" 
+        formControlName="ipv4Address" 
+        placeholder="192.168.1.1" 
+        class="w-full"
+        [ngClass]="{'ng-invalid ng-dirty': isFieldInvalid('ipv4Address')}" 
+      />
+      <small *ngIf="isFieldInvalid('ipv4Address')" class="p-error">
+        Please enter a valid IPv4 address (e.g., 192.168.1.1).
+      </small>
+    </div>
+
+    <div class="button">
+      <p-button 
+        type="submit" 
+        label="Submit Request" 
+        icon="pi pi-check" 
+        [loading]="isSubmitting">
+      </p-button>
+    </div>
+
+  </form>
+</div>

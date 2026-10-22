@@ -3,3 +3,49 @@
  * @description: Styling for the `app-adventureland-registration-form` component
  * =============================================================================
  */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5vh;
+}
+
+.registration-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+
+  .p-inputtext {
+    width: 100%;
+  }
+
+  /* Text input border color when selected/focused */
+  ::ng-deep .p-inputtext:enabled:focus {
+    border-color: var(--color-primary-background) !important;
+  }
+
+  /* Red error color code override */
+  ::ng-deep .p-error {
+    color: #cc241d !important;
+  }
+
+  ::ng-deep .p-inputtext.ng-invalid.ng-dirty,
+  ::ng-deep .p-inputtext.ng-invalid.ng-touched {
+    border-color: #cc241d !important;
+  }
+
+  /* Submit button styling and hover states */
+  ::ng-deep .p-button {
+    background-color: var(--color-alternate-background) !important;
+    border-color: var(--color-alternate-background) !important;
+
+    &:hover {
+      background-color: var(--color-link-text) !important;
+      border-color: var(--color-link-text) !important;
+    }
+
+    margin-top: 1rem;
+  }
+}

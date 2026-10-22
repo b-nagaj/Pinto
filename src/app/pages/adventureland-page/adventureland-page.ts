@@ -4,14 +4,14 @@
  * =============================================================================
  */
 
-import { Component } from "@angular/core";
-
-import { AdventurelandRegistrationForm } from "../../components/adventureland-registration-form/adventureland-registration-form"
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AdventurelandRegistrationForm } from '../../components/adventureland-registration-form/adventureland-registration-form';
 
 @Component({
-	selector: "app-adventureland-page",
-	imports: [AdventurelandRegistrationForm],
-	templateUrl: "./adventureland-page.html",
-	styleUrl: "./adventureland-page.scss",
+  selector: 'app-adventureland-page',
+  standalone: true,
+  imports: [CommonModule, AdventurelandRegistrationForm],
+  template: `<app-adventureland-registration-form></app-adventureland-registration-form>`
 })
 export class AdventurelandPage {}
