@@ -10,30 +10,21 @@
   --p-terminal-border-color: var(--color-alternate-background);
 }
 
-/* Wrapper for the primary content container */
 .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding-top: 6rem;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
-/* Silhouette */
-:host ::ng-deep .silhouette {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    width: 35vh;
-    display: flex;
-  }
+::ng-deep .silhouette img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
 }
