@@ -95,7 +95,8 @@ export class Menubar implements OnInit {
 	  goToAbout() { this.router.navigate(['/', 'about']); }
 	  goToSkills() { this.router.navigate(['/', 'skills']); }
 	  goToExperience() { this.router.navigate(['/', 'experience']); }
-	  goToResume() { this.router.navigate(['/resume']); }
+	  goToResume() { this.router.navigate(['/', 'resume']); }
+	  goToAdventureland() { this.router.navigate(['/', 'adventureland']); }
 	  openGitHub() { window.open('https://github.com/b-nagaj', '_blank'); }
 	  openContact() { window.location.href = 'mailto:bryce.nagaj@keysight.com'; }
 
@@ -121,6 +122,10 @@ export class Menubar implements OnInit {
 	        event.preventDefault();
 	        this.goToResume();
 	        break;
+	      case 'm':
+	      	event.preventDefault();
+	      	this.goToAdventureland();
+	      	break;
 	      case 'g':
 	        event.preventDefault();
 	        this.openGitHub();
