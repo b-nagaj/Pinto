@@ -69,6 +69,14 @@ export class Menubar implements OnInit {
 				}
 			},
 			{
+				label: "Adventureland",
+				icon: "pi pi-server",
+				badge: "Alt+M",
+				command: () => {
+					this.router.navigate(['/', 'adventureland'])
+				}
+			},
+			{
 				label: "GitHub",
 				icon: "pi pi-github",
 				badge: "Alt+G",
