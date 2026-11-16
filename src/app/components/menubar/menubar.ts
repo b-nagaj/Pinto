@@ -69,6 +69,14 @@ export class Menubar implements OnInit {
 				}
 			},
 			{
+				label: "Blog",
+				icon: "pi pi-inbox",
+				badge: "Alt+B",
+				command: () => {
+					this.router.navigate(['/', 'blog'])
+				}
+			},
+			{
 				label: "GitHub",
 				icon: "pi pi-github",
 				badge: "Alt+G",
@@ -87,7 +95,8 @@ export class Menubar implements OnInit {
 	  goToAbout() { this.router.navigate(['/', 'about']); }
 	  goToSkills() { this.router.navigate(['/', 'skills']); }
 	  goToExperience() { this.router.navigate(['/', 'experience']); }
-	  goToResume() { this.router.navigate(['/resume']); }
+	  goToResume() { this.router.navigate(['/', 'resume']); }
+	  goToBlog() { this.router.navigate(['/', 'blog']); }
 	  openGitHub() { window.open('https://github.com/b-nagaj', '_blank'); }
 	  openContact() { window.location.href = 'mailto:bryce.nagaj@keysight.com'; }
 
@@ -113,6 +122,10 @@ export class Menubar implements OnInit {
 	        event.preventDefault();
 	        this.goToResume();
 	        break;
+		  case 'b':
+			event.preventDefault();
+			this.goToBlog();
+			break;
 	      case 'g':
 	        event.preventDefault();
 	        this.openGitHub();
