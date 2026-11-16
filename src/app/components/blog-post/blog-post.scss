@@ -3,3 +3,107 @@
  * @description: Styling for the `app-blog-post` component
  * =============================================================================
  */
+
+.post-bubble {
+  background-color: var(--color-ternary-background);
+  border: 1px solid var(--color-alternate-background);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  &.is-expanded {
+    border-color: var(--color-link-text);
+  }
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border, #f1f5f9);
+
+  .post-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary-text);
+  }
+
+  .post-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-family: 'liberation-mono';
+    color: var(--color-alternate-text);
+    font-weight: bold;
+  }
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .post-body {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: var(--color-alternate-text);
+    white-space: pre-line;
+    overflow: hidden;
+
+    &.is-clamped {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+  }
+}
+
+.accordion-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-link-text);
+  background-color: color-mix(in srgb, var(--color-link-text) 10%, transparent);
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: color-mix(in srgb, var(--color-link-text) 16%, transparent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-link-text);
+    outline-offset: 2px;
+  }
+
+  .chevron {
+    display: inline-block;
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+}

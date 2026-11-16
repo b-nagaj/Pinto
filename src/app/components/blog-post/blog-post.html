@@ -3,3 +3,37 @@
 @description: Template for the `app-blog-post` component
 ================================================================================
 !-->
+
+<article class="post-bubble" [class.is-expanded]="isExpanded">
+  <header class="post-header">
+    <h2 class="post-title">{{ post.title }}</h2>
+    <div class="post-metadata">
+      <time [attr.datetime]="post.timestamp">
+        {{ post.timestamp | date:'yyyy-MM-dd HH:mm' }}
+      </time>
+      <span class="timezone">({{ post.timezone || defaultTimezone }})</span>
+    </div>
+  </header>
+
+  <div class="post-content">
+    <p
+      #contentParagraph
+      [id]="'post-body-' + post.timestamp"
+      class="post-body"
+      [class.is-clamped]="!isExpanded"
+    >{{ post.content }}</p>
+
+    @if (isOverflowing || isExpanded) {
+      <button
+        type="button"
+        class="accordion-toggle"
+        [attr.aria-expanded]="isExpanded"
+        [attr.aria-controls]="'post-body-' + post.timestamp"
+        (click)="toggleExpand()"
+      >
+        <span>{{ isExpanded ? 'Less' : 'More' }}</span>
+        <span class="chevron" [class.rotated]="isExpanded" aria-hidden="true">&#9662;</span>
+      </button>
+    }
+  </div>
+</article>

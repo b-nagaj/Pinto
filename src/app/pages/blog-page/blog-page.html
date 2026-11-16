@@ -2,12 +2,19 @@
 ================================================================================
 @description: Template for the `app-blog-page` component
 ================================================================================
-!-->
+-->
 
 
-<h2>
-    <span class="pi pi-wrench"></span>
-    No blog posts yet. Stay tuned for more posts soon!
-</h2>
 
-<app-blog-post></app-blog-post>
+<main class="blog-page-container">
+  <div class="section-header">
+    <i class="pi pi-megaphone section-icon"></i>
+    <span class="section-subtitle">Bryce's Insider Chronicles</span>
+  </div>
+
+  <section class="posts-feed" aria-label="Blog posts">
+    @for (post of sortedPosts; track post.timestamp + post.title) {
+      <app-blog-post [post]="post" />
+    }
+  </section>
+</main>
