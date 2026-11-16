@@ -58,7 +58,6 @@ export class SkillPage {
         { name: "Eclipse", icon: "assets/icons/skills/eclipse.svg" },
         { name: "NetBeans", icon: "assets/icons/skills/netbeans.svg" },
         { name: "Postman", icon: "assets/icons/skills/postman.svg" },
-        { name: "Apigee", icon: "assets/icons/skills/apigee.svg" },
         { name: "JMeter", icon: "assets/icons/skills/jmeter.svg" },
         { name: "Git", icon: "assets/icons/skills/git.svg" },
         { name: "Github", icon: "assets/icons/skills/github.svg" },
