@@ -16,12 +16,13 @@
   </header>
 
   <div class="post-content">
-    <p
-      #contentParagraph
+    <div
+      #contentContainer
       [id]="'post-body-' + post.timestamp"
       class="post-body"
       [class.is-clamped]="!isExpanded"
-    >{{ post.content }}</p>
+      [innerHTML]="renderedContent"
+    ></div>
 
     @if (isOverflowing || isExpanded) {
       <button

@@ -1,7 +1,7 @@
 /**
- * =============================================================================
- * @description: Styling for the `app-blog-post` component
- * =============================================================================
+- =============================================================================
+- @description: Styling for the `app-blog-post` component
+- =============================================================================
  */
 
 .post-bubble {
@@ -60,7 +60,6 @@
     line-height: 1.7;
     font-size: 1.05rem;
     color: var(--color-alternate-text);
-    white-space: pre-line;
     overflow: hidden;
 
     &.is-clamped {
@@ -68,6 +67,45 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
       line-clamp: 3;
+    }
+
+    ::ng-deep {
+      p {
+        margin: 0 0 0.75rem 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        color: var(--color-link-text);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        font-weight: 500;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+
+      ul,
+      ol {
+        margin: 0 0 0.75rem 1.25rem;
+        padding: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      code {
+        font-family: 'liberation-mono', monospace;
+        font-size: 0.9em;
+        padding: 0.15rem 0.35rem;
+        border-radius: 4px;
+        background-color: color-mix(in srgb, var(--color-alternate-text) 10%, transparent);
+      }
     }
   }
 }
