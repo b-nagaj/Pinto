@@ -70,7 +70,7 @@ export class Menubar implements OnInit {
 			},
 			{
 				label: "Blog",
-				icon: "pi pi-inbox",
+				icon: "pi pi-megaphone",
 				badge: "Alt+B",
 				command: () => {
 					this.router.navigate(['/', 'blog'])
